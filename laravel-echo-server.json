@@ -7,7 +7,7 @@
 			"key": "c2af35ddd1bc0bce11da25ffd74f5716"
 		}
 	],
-	"database": "redis",
+	"database": "sqlite",
 	"databaseConfig": {
 		"redis": {},
 		"sqlite": {
