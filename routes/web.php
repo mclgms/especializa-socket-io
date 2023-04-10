@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/create-post', function(){
+Route::get('/create-post', function () {
     $user = \App\Models\User::find(1);
     $post = $user->posts()->create([
         'title' => \Illuminate\Support\Str::random(50),
@@ -21,7 +22,22 @@ Route::get('/create-post', function(){
     ]);
 
     // event(new \App\Events\PostCreated($post));
-    echo "Post criado";
+    echo "Post criado <br><br>";
+
+//    \Illuminate\Console\Command::macro('notify', function (string $text, string $body, $icon = null) {
+//        $notifier = $this->laravel[Contracts\Notifier::class];
+//
+//        $notification = $this->laravel[Contracts\Notification::class]
+//            ->setTitle($text)
+//            ->setBody($body);
+//
+//        if (!empty($icon)) {
+//            $notification->setIcon($icon);
+//        }
+//        echo "notificou... <br>";
+//        $notifier->send($notification);
+//    });
+
 });
 
 Route::get('/', function () {

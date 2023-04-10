@@ -41,3 +41,6 @@ window.Echo = new Echo({
     host: window.location.hostname  + ":6001",
 });
 
+require('./Echo.js');
+
+
